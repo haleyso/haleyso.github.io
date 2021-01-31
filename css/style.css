@@ -159,7 +159,7 @@ div.logo a:hover { color: rgb(100,100,100); }
 main {
     padding: 1em;
     padding-top: 3em;
-    font-family: 'Mate', serif;
+    font-family:'Fira Sans', 'Mate', serif;
     font-weight: 300;
     background-color: rgba(255,255,255,0.8);
     flex: 1;

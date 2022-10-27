@@ -44,12 +44,23 @@ h2 {
     color: rgb(100,100,100);
 }
 
-h3 {
+/* h3 {
     font-family:'Fira Sans', 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 110%;
     line-height:140%;
     color: rgb(50,50,50);
+} */
+
+h3 {
+	/*font-family: 'Fira Sans','Open Sans', sans-serif;*/
+	/*  font-family: 'News Cycle','Heebo','Noto Sans TC', sans-serif; */
+    font-family:'Fira Sans', 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 120%;
+    line-height:120%;
+    /*color: rgb(50,50,50);*/
+    color: rgb(99, 177, 229);
 }
 
 

@@ -38,7 +38,7 @@ h1 {
 h2 {
     font-family: 'Fira Sans','Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 110%;
+    font-size: 120%;
     line-height:120%;
     color: rgb(100,100,100);
 }
@@ -129,9 +129,10 @@ div.logo {
 }
 
 #header_nav ul li:hover { 
-    background: rgba(99, 177, 229, 1); 
+    background: rgba(99, 177, 229, 0.4); 
+    border-radius: 4%;
 }
-#header_nav ul li:hover a { color: white; }
+#header_nav ul li:hover a { color: rgb(255, 255, 255); }
 #header_nav ul li:hover ul li a { color: rgb(100,100,100); }
 #header_nav ul li:hover ul li:hover a { color: white; }
 
@@ -364,3 +365,13 @@ td.sourceCode { padding-left: 5px; }
     footer {width: 1000px;}
 }
 
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }

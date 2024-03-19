@@ -28,17 +28,16 @@ body {
 }
 
 h1 {
-    font-size: 370%;
-    line-height:100%;
-    font-family: 'Amatic SC';
+    font-size: 150%;
+    line-height:120%;
+    
+    font-family: 'Fira Sans', 'Open Sans', sans-serif;
 }
-
-
 
 h2 {
     font-family: 'Fira Sans','Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 120%;
+    font-size: 130%;
     line-height:120%;
     color: rgb(100,100,100);
 }
@@ -54,7 +53,7 @@ h2 {
 h3 {
 	/*font-family: 'Fira Sans','Open Sans', sans-serif;*/
 	/*  font-family: 'News Cycle','Heebo','Noto Sans TC', sans-serif; */
-    font-family:'Fira Sans', 'Open Sans', sans-serif;
+    font-family: 'Fira Sans', 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 110%;
     line-height:120%;
@@ -70,6 +69,64 @@ p {
     -ms-hyphens:none;
     hyphens:none;
     font-size: 90%;
+}
+
+
+/* RESEARCH */
+.container {
+    display: flex; /* Use flexbox for easy alignment */
+    align-items: center; /* Vertically center the items */
+  }
+  .container img {
+    margin-right: 2%; /* Adjust the spacing between image and text */
+  }
+h1.research {
+    font-size: 170%;
+    line-height:120%;
+    font-weight: 300;
+    font-family: 'Lato','Fira Sans','Open Sans', sans-serif;
+    text-align: center;
+}
+
+h2.research {
+    font-family: 'Fira Sans','Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 110%;
+    line-height:200%;
+    color: rgb(100,100,100);
+    text-align: center;
+}
+
+h3.research {
+    text-align: center;
+    font-family:'Fira Sans', 'Open Sans', sans-serif;
+    font-weight: 50;
+    font-size: 90%;
+    line-height:120%;
+    color: rgb(100,100,100);
+}
+
+p.research {
+    text-align:left;
+    -webkit-hyphens:none;
+    -moz-hyphens:none;
+    -ms-hyphens:none;
+    hyphens:none;
+    font-size: 90%;
+}
+
+p.citation {
+    text-align:left;
+    -webkit-hyphens:none;
+    -moz-hyphens:none;
+    -ms-hyphens:none;
+    hyphens:none;
+    font-size: 90%;
+    font-family: monospace;
+    color: rgb(125, 125, 125);
+    white-space: nowrap;
+    overflow: auto;
+    background-color: rgba(225, 225, 225, 0.16);
 }
 
 .center {
@@ -191,7 +248,7 @@ main a {
 }
 
 main a:hover { color: rgb(100, 100, 100); }
-main a:visited { color: rgb(2, 33, 105); }
+/* main a:visited { color: rgb(2, 33, 105); } */
 
 main h1#article_title {
     font-family: 'Mate', serif;

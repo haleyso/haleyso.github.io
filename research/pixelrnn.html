@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Research</title>
+        <link rel="stylesheet" href="../css/style.css" />
+	<link rel="icon" type="image/png" href="../images/crown.png">
+	<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112599026-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-112599026-1');
+	</script>
+
+    </head>
+    
+    <body>
+
+      <header>
+	<div class="logo">
+          <a href="../">Haley&nbsp;So</a>
+	</div>
+	<nav id="header_nav">
+	  <ul>
+	    <li><a href="../projects">projects</a></li>
+	    <li><a href="./">research</a></li>
+	    <li><a href="../misc">misc</a></li>
+	  </ul>
+	</nav>
+      </header>
+      
+      <main role="main">
+      	<h1 class="research">PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors</h1>
+        <h2 class="research">Haley M. So<sup> 1</sup>, Laurie Bose<sup> 2</sup>, Piotr Dudek<sup> 2</sup>, Gordon Wetzstein<sup> 1</sup></h2> 
+        <h2 class="research"><sup>1 </sup>Stanford University &nbsp;&nbsp;&nbsp;   <sup>2 </sup>The University of Manchester </h2> 
+		<!-- <em><h3 class="research">IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</h3></em><br> -->
+        <div style="text-align: center;">
+            <a href="">paper</a> / <a href="">supplement</a> / <a href="">github</a>
+        </div>
+        
+        <br>
+        <h2>Abstract:</h2><br>
+        <!-- <p class="research" style="text-indent: 2em;"> -->
+        <p class="research">
+            Conventional image sensors digitize high-resolution images at fast frame rates, producing a large amount of data that needs to be transmitted off the sensor for further processing. This is challenging for perception systems operating on edge devices, because communication is power inefficient and induces latency. Fueled by innovations in stacked image sensor fabrication, emerging sensor<code>&#8212;</code>processors offer programmability and minimal processing capabilities directly on the sensor. We exploit these capabilities by developing an efficient recurrent neural network architecture, PixelRNN, that encodes spatio-temporal features on the sensor using purely binary operations. PixelRNN reduces the amount of data to be transmitted off the sensor by factors up to 256 compared to the raw sensor data while offering competitive accuracy for hand gesture recognition and lip reading tasks. We experimentally validate PixelRNN using a prototype implementation on the SCAMP-5 sensor<code>&#8212;</code>processor platform. 
+        </p>
+        <br>
+        <h2>Overview:</h2>
+        <img src="CVPR_pipeline.jpg" alt="PixelRNN Pipeline Overview" width=100%>
+        <p>The perception pipeline of PixelRNN can be broken down into an in-pixel encoder and a task-specific decoder. On the left is the camera equipped with a sensor<code>&#8212;</code>processor, which offers processing and memory at the pixel level. The captured light is directly processed by a CNN that extracts spatial features, which are further processed by a convolutional recurrent neural network with built-in memory and temporal feature extraction. Here we show our PixelRNN variant on the right, &#x2A; being the convolution operator, &odot;the element-wise multiplication, and &Psi; a nonlinear function. Instead of sending out full 256 x 256 values at every time step, our encoder outputs 64 x 64 once every 16 time steps. While we show this pipeline for hand gesture recognition, the decoder can be designed for any perception task.</p>
+<br>
+        <h2>Prototype on SCAMP-5 Vision Sensor</h2>
+        <p>We utilize the emerging class of sensor<code>&#8212;</code>processors to prototype the in-pixel RNN. The platform we use is the <a href="https://personalpages.manchester.ac.uk/staff/p.dudek/scamp/">SCAMP-5 vision sensor.</a></p>
+        <img src="pixelrnn_pipeline.jpg" alt="Prototype Pipeline" width=100%>
+        <p class="research">The input image is downsampled, duplicated, and binarized. Stored convolutional weights perform 16 convolutions, to produce 16 feature maps in the 4 x 4 grid of processor elements. A ReLU activation is applied, followed by max-pooling, downsampling, and binarization. This can either be fed to another CNN layer or to the input of the RNN. The RNN takes in the output of the CNN and the previous hidden state h<sub>t-1</sub>. The hidden state h<sub>t</sub> is updated every timestep. The output o<sub>t</sub> is read out every 16 frames, yielding 64x decrease in bandwidth. </p>
+         
+        <!-- <div class="container">
+            <img src="CNN_flow.jpg" width=50% alt="CNN">
+            <p>The in-pixel convolutional operation. </p>
+        </div>
+        <div class="container">
+            <img src="RNN_figure.jpg" width=50% alt="CNN">
+            <p>The PixelRNN operation.</p>
+        </div> -->
+
+<br>
+        
+
+
+        <h2>BibTeX:</h2>
+        <p class="citation"><br>&nbsp;&nbsp;@inproceedings{hmso2024pixelrnn,<br>
+            &nbsp;&nbsp;&nbsp;title={PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors},<br>
+            &nbsp;&nbsp;&nbsp;author={Haley M. So and Laurie Bose and Piotr Dudek and Gordon Wetzstein},<br>
+            &nbsp;&nbsp;&nbsp;journal={CVPR},<br>
+            &nbsp;&nbsp;&nbsp;year={2024},<br>
+            &nbsp;&nbsp;}
+        </p>
+        
+      </main>
+      
+      <footer>
+      </footer>
+    </body>
+</html>

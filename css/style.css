@@ -11,7 +11,7 @@
 }
 
 html {
-    font-size: 105%;
+    font-size: 100%;
 }
 
 body {
@@ -250,6 +250,9 @@ main a {
 
 main a:hover { color: rgb(100, 100, 100); }
 main a:visited { color: rgb(99, 177, 229); }
+a.gray {
+    color:rgb(100,100,100);
+}
 
 main h1#article_title {
     /* font-family: 'Mate', serif; */

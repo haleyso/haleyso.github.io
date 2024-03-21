@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Misc</title>
+        <link rel="stylesheet" href="../css/style.css" />
+	<link rel="icon" type="image/png" href="../images/crown.png">
+	<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103149085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-103149085-1');
+</script>
+
+    </head>
+    
+    <body>
+
+      <header>
+	<div class="logo">
+          <a href="../">Haley&nbsp;So</a>
+	</div>
+	<nav id="header_nav">
+	  <ul>
+	    <li><a href="../projects">projects</a></li>
+	    <li><a href="../research">research</a></li>
+	    <li><a href="./">misc</a></li>
+	  </ul>
+	</nav>
+      </header>
+      
+      <main role="main">
+        <h1 class="research">MantissaCam: Learning Snapshot High-dynamic-range Imaging with Perceptually-based In-pixel Irradiance Encoding</h1>
+        <h2 class="research">Haley M. So<sup> 1</sup>, Julien N. P. Martel<sup> 1</sup>, Piotr Dudek<sup> 2</sup>, Gordon Wetzstein<sup> 1</sup></h2> 
+        <h2 class="research"><sup>1 </sup>Stanford University &nbsp;&nbsp;&nbsp;   <sup>2 </sup>The University of Manchester </h2> 
+		<!-- <em><h3 class="research">IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</h3></em><br> -->
+        <div style="text-align: center;">
+            <a href="mantissacam.pdf">paper</a> / <a href="mantissacam_supplement.pdf">supplement</a> 
+            <h2 class="research"><em>(ICCP 2022)</em></h2>
+        </div>
+	
+        <br>
+        <h2>Abstract:</h2><br>
+        <!-- <p class="research" style="text-indent: 2em;"> -->
+        <p class="research">
+          The ability to image high-dynamic-range (HDR) scenes is crucial in many computer vision applications. The dynamic range of conventional sensors, however, is fundamentally limited by their well capacity, resulting in saturation of bright scene parts. To overcome this limitation, emerging sensors offer in-pixel processing capabilities to encode the incident irradiance. Among the most promising encoding schemes is modulo wrapping, which results in a computational photography problem where the HDR scene is computed by an irradiance unwrapping algorithm from the wrapped low-dynamic-range (LDR) sensor image. Here, we design a neural network–based algorithm that outperforms previous irradiance unwrapping methods and we design a perceptually inspired “mantissa,” or log-modulo, encoding scheme that more efficiently wraps an HDR scene into an LDR sensor. Combined with our reconstruction framework, MantissaCam achieves state-of-the-art results among modulo-type snapshot HDR imaging approaches. We demonstrate the efficacy of our method in simulation and show benefits of our algorithm on modulo images captured with a prototype implemented with a programmable sensor.
+        </p>
+        <br>
+        <h2>Overview:</h2>
+        <br>
+        <img src="mantissa_pipeline.png" alt="MantissaCam Pipeline Overview" width=100%>
+        <p>An HDR scene is imaged by a camera with in-pixel processing capabilities, implementing the proposed irradiance encoding scheme (left). The resulting LDR sensor image encodes lower irradiance values similar to a conventional camera, but bright image regions, including the lamp and the reflections on the ground, are wrapped rather than saturated (center). The mantissa-encoded image is first processed by a network that predicts the wrap edges and then by another network that predicts the winding number (center right), the number of times the pixel saturates and resets. The per-pixel winding number, together with the mantissa-encoded image, are used to reconstruct the HDR image (right). The symbols ∆ , ◦ , and + denote channel-wise Laplacian operators, channel concatenation, and addition, respectively.</p>
+
+      </main>
+      
+      <footer>
+	
+      </footer>
+    </body>
+</html>

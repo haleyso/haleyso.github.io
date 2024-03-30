@@ -57,6 +57,22 @@
         <img src="mantissa_pipeline.png" alt="MantissaCam Pipeline Overview" width=100%>
         <p>An HDR scene is imaged by a camera with in-pixel processing capabilities, implementing the proposed irradiance encoding scheme (left). The resulting LDR sensor image encodes lower irradiance values similar to a conventional camera, but bright image regions, including the lamp and the reflections on the ground, are wrapped rather than saturated (center). The mantissa-encoded image is first processed by a network that predicts the wrap edges and then by another network that predicts the winding number (center right), the number of times the pixel saturates and resets. The per-pixel winding number, together with the mantissa-encoded image, are used to reconstruct the HDR image (right). The symbols ∆ , ◦ , and + denote channel-wise Laplacian operators, channel concatenation, and addition, respectively.</p>
 
+
+        <br>
+        
+
+
+        <h2>BibTeX:</h2>
+        <p class="citation"><br>&nbsp;&nbsp;@inproceedings{hmso2022mantissacam,<br>
+            &nbsp;&nbsp;&nbsp;title={MantissaCam: Learning Snapshot High-dynamic-range Imaging with Perceptually-based In-pixel Irradiance Encoding},<br>
+            &nbsp;&nbsp;&nbsp;author={Haley M. So and Julien N. P. Martel and Piotr Dudek and Gordon Wetzstein},<br>
+            &nbsp;&nbsp;&nbsp;booktitle = {2022 IEEE International Conference on Computational Photography (ICCP)},<br>
+            &nbsp;&nbsp;&nbsp;year={2022},<br>
+            &nbsp;&nbsp;&nbsp;doi = {10.1109/ICCP54855.2022.9887659},<br>
+            &nbsp;&nbsp;}
+        </p>
+        <br>
+        
       </main>
       
       <footer>

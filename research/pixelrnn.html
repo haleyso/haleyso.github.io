@@ -41,7 +41,7 @@
         <h2 class="research"><sup>1 </sup>Stanford University &nbsp;&nbsp;&nbsp;   <sup>2 </sup>The University of Manchester </h2> 
 		<!-- <em><h3 class="research">IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</h3></em><br> -->
         <div style="text-align: center;">
-            <a href="PixelRNN_cvpr.pdf">paper</a> / <a href="PixelRNN_supp.pdf">supplement</a> / <a href="">github</a><br>
+            <a href="PixelRNN_cvpr.pdf">paper</a> / <a href="PixelRNN_supp.pdf">supplement</a> / <a href="https://www.youtube.com/watch?v=grlIwYMcmG0">video</a> / <a href="">github</a><br>
             <h2 class="research"><em>(CVPR 2024)</em></h2>
         </div>
         
@@ -59,7 +59,7 @@
         <h2>Prototype on SCAMP-5 Vision Sensor</h2>
         <p>We utilize the emerging class of sensor<code>&#8212;</code>processors to prototype the in-pixel RNN. The platform we use is the <a href="https://personalpages.manchester.ac.uk/staff/p.dudek/scamp/">SCAMP-5 vision sensor.</a></p>
         <img src="pixelrnn_pipeline.jpg" alt="Prototype Pipeline" width=100%>
-        <p class="research">The input image is downsampled, duplicated, and binarized. Stored convolutional weights perform 16 convolutions, to produce 16 feature maps in the 4 x 4 grid of processor elements. A ReLU activation is applied, followed by max-pooling, downsampling, and binarization. This can either be fed to another CNN layer or to the input of the RNN. The RNN takes in the output of the CNN and the previous hidden state h<sub>t-1</sub>. The hidden state h<sub>t</sub> is updated every timestep. The output o<sub>t</sub> is read out every 16 frames, yielding 64x decrease in bandwidth. </p>
+        <p class="research">The input image is downsampled, duplicated, and binarized. Stored convolutional weights perform 16 convolutions, to produce 16 feature maps in the 4 x 4 grid of processor elements. A ReLU activation is applied, followed by max-pooling, downsampling, and binarization. This can either be fed to another CNN layer or to the input of the RNN. The RNN takes in the output of the CNN and the previous hidden state h<sub>t-1</sub>. The hidden state h<sub>t</sub> is updated every timestep. The output o<sub>t</sub> is read out every 16 frames, yielding 256x decrease in bandwidth. </p>
          
         <!-- <div class="container">
             <img src="CNN_flow.jpg" width=50% alt="CNN">

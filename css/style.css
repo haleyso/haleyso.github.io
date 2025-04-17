@@ -69,6 +69,7 @@ p {
     -ms-hyphens:none;
     hyphens:none;
     font-size: 90%;
+    overflow-wrap: anywhere;
 }
 
 

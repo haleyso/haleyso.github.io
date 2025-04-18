@@ -145,6 +145,24 @@ p.citation {
     text-align: right;
 }
 
+.paper-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+  }
+  
+  .paper-thumb {
+    width: 100px;
+    height: auto;
+    margin-right: 1em;
+    border-radius: 0px;
+    object-fit: cover;
+  }
+  
+  .paper-info {
+    flex: 1;
+  }
+  
 /*******HEADER*******/
 header {
     width: 100%;

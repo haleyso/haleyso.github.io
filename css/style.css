@@ -77,6 +77,9 @@ p {
 .container {
     display: flex; /* Use flexbox for easy alignment */
     align-items: center; /* Vertically center the items */
+    width: 100%; /* Add this */
+    max-width: 100%; /* And this */
+    box-sizing: border-box; /* So padding/margins don't cause overflow */
   }
   .container img {
     margin-right: 2%; /* Adjust the spacing between image and text */

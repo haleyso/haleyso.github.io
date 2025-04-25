@@ -73,6 +73,7 @@ p {
 }
 
 
+
 /* RESEARCH */
 .container {
     display: flex; /* Use flexbox for easy alignment */
@@ -118,6 +119,7 @@ p.research {
     -ms-hyphens:none;
     hyphens:none;
     font-size: 90%;
+    overflow-wrap: anywhere;
 }
 
 p.citation {

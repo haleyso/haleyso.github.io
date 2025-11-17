@@ -60,6 +60,7 @@ h3 {
     line-height:120%;
     /*color: rgb(50,50,50);*/
     color: rgb(99, 177, 229);
+    /* overflow-wrap: anywhere; */
 }
 
 
@@ -111,6 +112,7 @@ h3.research {
     font-size: 90%;
     line-height:120%;
     color: rgb(100,100,100);
+    overflow-wrap: anywhere;
 }
 
 p.research {

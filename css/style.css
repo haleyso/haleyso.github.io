@@ -12,17 +12,19 @@
 
 html {
     font-size: 90%;
+	scrollbar-gutter: stable;
 }
 
+@supports not (scrollbar-gutter: stable) {
+	html { overflow-y: scroll; }
+
+}
+	
 body {
     font-family:'Fira Sans', 'Open Sans', sans-serif;
     font-weight: 600;
     line-height:140%;
     min-height: 100vh;
-    /*background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom left;*/
-    /* background-opacity: 0.6; */
     display: flex;
     flex-direction: column;
     overflow-wrap: anywhere;

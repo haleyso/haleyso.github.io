@@ -150,7 +150,9 @@ p.citation {
 .red {
     color: rgb(99,177,229);
 }
-
+.nowrap { 
+    white-space: nowrap; 
+}
 .right {
     text-align: right;
 }
@@ -283,6 +285,8 @@ main a:visited { color: rgb(99, 177, 229); }
 a.gray {
     color:rgb(100,100,100);
 }
+main a.award,
+main a.award:visited { color: rgb(201, 76, 26); }
 
 main h1#article_title {
     /* font-family: 'Mate', serif; */
